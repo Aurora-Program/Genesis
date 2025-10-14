@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Publicar servicio de cómputo",
+  "type": "object",
+  "properties": {
+    "nombre": {"type": "string", "minLength": 3},
+    "tipo": {"type": "string", "enum": ["compute", "data", "portal", "dns", "model"]},
+    "cpu": {"type": "integer", "minimum": 1},
+    "memGB": {"type": "number", "minimum": 0.5},
+    "duracionHoras": {"type": "number", "minimum": 0.25},
+    "licencia": {"type": "string", "enum": ["GPL-3.0", "MIT", "Propietaria-con-limitaciones"]},
+    "politicaUso": {"type": "string", "enum": ["general", "investigacion", "educativa"]},
+    "descriptorCID": {"type": "string"},
+    "minReplicas": {"type": "integer", "minimum": 1},
+    "SLO": {
+      "type": "object",
+      "properties": {
+        "uptime": {"type": "number", "minimum": 0, "maximum": 1},
+        "latencyMsP95": {"type": "integer", "minimum": 1}
+      },
+      "required": ["uptime", "latencyMsP95"]
+    }
+  },
+  "required": ["nombre", "tipo", "cpu", "memGB", "duracionHoras", "licencia", "politicaUso", "minReplicas", "SLO"]
+}

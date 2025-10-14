@@ -1,0 +1,105 @@
+# Catálogo extendido de códigos FFE con ejemplos de mapeo
+# Este archivo ayuda a entender cómo mapear conceptos a códigos FFE
+
+# GUÍAS DE MAPEO PARA NIVEL 1 (3 dimensiones principales)
+
+forma_mapping:
+  1_nombre:
+    description: "Sustantivos, entidades, objetos conceptuales"
+    ejemplos: ["casa", "sol", "amor", "inteligencia", "libertad"]
+    subtipos: ["concreto", "abstracto", "propio", "común"]
+  
+  2_verbo:
+    description: "Acciones, procesos, estados, transformaciones"
+    ejemplos: ["construir", "pensar", "existir", "corriendo", "amando"]
+    subtipos: ["acción", "estado", "proceso", "modal"]
+  
+  3_modificador:
+    description: "Adjetivos, adverbios, determinantes, calificadores"
+    ejemplos: ["grande", "rápidamente", "este", "muy", "inteligente"]
+    subtipos: ["calificativo", "determinativo", "adverbial"]
+
+funcion_mapping:
+  1_cotidiano:
+    description: "Conocimiento experiencial, cultural, tradicional"
+    ejemplos: ["casa", "familia", "comida", "trabajo", "amistad"]
+    dominios: ["personal", "social", "cultural", "experiencial"]
+  
+  2_cientifico:
+    description: "Conocimiento formal, verificable, sistemático"
+    ejemplos: ["átomo", "gravedad", "ecosistema", "neurona", "algoritmo"]
+    dominios: ["física", "biología", "matemáticas", "psicología", "computación"]
+  
+  3_tecnico:
+    description: "Conocimiento aplicado, procedural, instrumental"
+    ejemplos: ["construir", "programar", "diseñar", "operar", "fabricar"]
+    dominios: ["ingeniería", "tecnología", "artes aplicadas", "oficios"]
+
+estructura_mapping:
+  1_elemento:
+    description: "Componentes básicos, unidades fundamentales"
+    ejemplos: ["átomo", "palabra", "persona", "idea", "herramienta"]
+    características: ["indivisible en contexto", "unidad funcional"]
+  
+  2_proceso:
+    description: "Transformaciones, flujos, secuencias temporales"
+    ejemplos: ["aprendizaje", "construcción", "evolución", "comunicación"]
+    características: ["temporal", "transformativo", "dinámico"]
+  
+  3_sistema:
+    description: "Estructuras complejas, organizaciones, totalidades"
+    ejemplos: ["lenguaje", "ecosistema", "sociedad", "mente", "ciudad"]
+    características: ["emergente", "organizado", "complejo"]
+
+# GUÍAS PARA COMBINACIONES FRECUENTES
+
+combinaciones_comunes:
+  entidades_fisicas:
+    patron: [1, 1, 1]  # Nombre + Cotidiano + Elemento
+    ejemplos: ["mesa", "árbol", "perro", "agua"]
+  
+  conceptos_abstractos:
+    patron: [1, 2, 3]  # Nombre + Científico + Sistema  
+    ejemplos: ["inteligencia", "democracia", "ecosistema"]
+  
+  acciones_tecnicas:
+    patron: [2, 3, 2]  # Verbo + Técnico + Proceso
+    ejemplos: ["programar", "diseñar", "construir", "fabricar"]
+  
+  procesos_naturales:
+    patron: [2, 2, 2]  # Verbo + Científico + Proceso
+    ejemplos: ["evolucionar", "fotosíntesis", "cristalizar"]
+
+# REGLAS DE ASIGNACIÓN
+
+reglas_nivel_9:
+  coherencia: "Las subdimensiones deben ser coherentes con la dimensión principal"
+  especificidad: "Cada subdimensión refina la dimensión superior"
+  completitud: "Todas las subdimensiones deben estar definidas"
+
+reglas_nivel_27:
+  profundidad: "Solo expandir donde añada valor semántico"
+  consistencia: "Mantener la lógica fractal en todas las expansiones"
+  utilidad: "Cada expansión debe servir para distinción semántica real"
+
+# CASOS ESPECIALES
+
+casos_especiales:
+  polisemia:
+    description: "Palabras con múltiples significados"
+    estrategia: "Crear vectores separados para cada sentido"
+    ejemplo: 
+      banco_financiero: [1, 2, 3]  # Nombre + Científico + Sistema
+      banco_asiento: [1, 1, 1]     # Nombre + Cotidiano + Elemento
+  
+  neologismos:
+    description: "Palabras nuevas o técnicas"
+    estrategia: "Analizar componentes etimológicos y función"
+    ejemplo:
+      smartphone: [1, 3, 1]  # Nombre + Técnico + Elemento
+  
+  compuestos:
+    description: "Palabras compuestas o frases lexicalizadas"
+    estrategia: "Considerar el significado emergente, no solo los componentes"
+    ejemplo:
+      inteligencia_artificial: [1, 2, 3]  # El compuesto es un sistema

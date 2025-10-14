@@ -1,0 +1,89 @@
+# Ejemplos de palabras con codificación FFE fractal 3-9-27
+# Siguiendo el modelo de vectores fractales de Aurora
+# Estructura: [nivel_3, nivel_9, nivel_27]
+
+casa:
+  # Vector principal [1,1,3] = Nombre, Cotidiano, Sistema
+  nivel_3: [1, 1, 3]
+  # Subdimensiones 9 elementos: [nombre, cotidiano, sistema]
+  nivel_9: 
+    - [1, 2, 1]  # Nombre: concreto, femenino, singular
+    - [1, 1, 2]  # Cotidiano: empírico, concreto, familiar
+    - [2, 1, 2]  # Sistema: componente, estable, adaptable
+  # Sub-subdimensiones 27 elementos (3x3x3)
+  nivel_27:
+    forma: [[1,1,1], [2,3,1], [1,2,3]]  # Expansión fractal de nombre
+    funcion: [[1,2,3], [1,2,3], [2,3,1]]  # Expansión fractal de cotidiano
+    estructura: [[2,1,1], [1,2,2], [1,2,2]]  # Expansión fractal de sistema
+
+sol:
+  # Vector principal [1,2,1] = Nombre, Científico, Elemento
+  nivel_3: [1, 2, 1]
+  nivel_9:
+    - [1, 1, 1]  # Nombre: concreto, masculino, singular
+    - [2, 1, 1]  # Científico: teórico, matemático, naturales
+    - [1, 1, 1]  # Elemento: atómico, generativo, permanente
+  nivel_27:
+    forma: [[1,1,1], [1,3,1], [1,2,3]]
+    funcion: [[2,3,1], [1,2,3], [1,2,3]]
+    estructura: [[1,2,3], [1,2,3], [1,2,3]]
+
+construir:
+  # Vector principal [2,3,2] = Verbo, Técnico, Proceso
+  nivel_3: [2, 3, 2]
+  nivel_9:
+    - [1, 1, 1]  # Verbo: infinitivo, transitivo, dinámico
+    - [2, 2, 1]  # Técnico: mecánico, intermedio, industrial
+    - [1, 2, 2]  # Proceso: físico, progresivo, sistémico
+  nivel_27:
+    forma: [[1,2,3], [1,2,3], [1,2,3]]
+    funcion: [[2,3,1], [2,3,1], [1,2,3]]
+    estructura: [[1,2,3], [2,3,1], [2,3,1]]
+
+amor:
+  # Vector principal [1,1,1] = Nombre, Cotidiano, Elemento
+  nivel_3: [1, 1, 1]
+  nivel_9:
+    - [1, 1, 1]  # Nombre: abstracto, masculino, incontable
+    - [3, 3, 3]  # Cotidiano: intuitivo, narrativo, cultural
+    - [3, 1, 3]  # Elemento: complejo, comunicativo, recurrente
+  nivel_27:
+    forma: [[1,2,1], [1,3,1], [1,2,3]]
+    funcion: [[3,2,1], [3,2,3], [3,2,3]]
+    estructura: [[3,1,2], [3,2,1], [3,2,3]]
+
+corriendo:
+  # Vector principal [2,1,2] = Verbo, Cotidiano, Proceso  
+  nivel_3: [2, 1, 2]
+  nivel_9:
+    - [3, 2, 1]  # Verbo: gerundio, intransitivo, dinámico
+    - [1, 2, 1]  # Cotidiano: empírico, operativo, personal
+    - [1, 2, 1]  # Proceso: físico, progresivo, local
+  nivel_27:
+    forma: [[2,3,1], [2,2,3], [1,2,3]]
+    funcion: [[1,2,3], [2,3,1], [1,2,3]]
+    estructura: [[1,2,3], [2,3,1], [1,2,3]]
+
+ley:
+  # Vector principal [1,2,3] = Nombre, Científico, Sistema
+  nivel_3: [1, 2, 3]
+  nivel_9:
+    - [1, 2, 1]  # Nombre: abstracto, femenino, singular
+    - [2, 3, 3]  # Científico: teórico, cualitativo, sociales
+    - [2, 1, 1]  # Sistema: complejo, estructurado, rígido
+  nivel_27:
+    forma: [[1,2,1], [2,3,1], [1,2,3]]
+    funcion: [[2,3,1], [3,2,1], [3,2,3]]
+    estructura: [[2,3,1], [1,2,3], [1,2,3]]
+
+inteligencia:
+  # Vector principal [1,2,3] = Nombre, Científico, Sistema
+  nivel_3: [1, 2, 3]
+  nivel_9:
+    - [1, 2, 3]  # Nombre: abstracto, femenino, incontable
+    - [3, 2, 2]  # Científico: computacional, sistemático, formales
+    - [3, 2, 3]  # Sistema: no-lineal, emergente, transformativo
+  nivel_27:
+    forma: [[1,2,1], [2,3,1], [3,2,3]]
+    funcion: [[3,2,1], [2,3,1], [2,3,1]]
+    estructura: [[3,2,1], [2,3,1], [3,2,3]]

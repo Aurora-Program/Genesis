@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Oferta de sesión",
+  "type": "object",
+  "properties": {
+    "serviceId": {"type": "string"},
+    "clientKey": {"type": "string"},
+    "durationHours": {"type": "number", "minimum": 0.25},
+    "maxPrice": {"type": "number", "minimum": 0},
+    "minReplicas": {"type": "integer", "minimum": 1},
+    "clientStake": {"type": "number", "minimum": 0},
+    "SLOhash": {"type": "string"}
+  },
+  "required": ["serviceId", "clientKey", "durationHours", "minReplicas", "clientStake", "SLOhash"]
+}

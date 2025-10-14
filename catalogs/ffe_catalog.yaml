@@ -1,0 +1,476 @@
+# FFE Catalog v2 - Compact Indexed Scheme (Option 1)
+# Architecture: 3 (axes) -> 9 (subdimensions) -> 27 (specs); each spec has 8 values (0-7)
+# Order enforced: F (Función) -> Fo (Forma) -> E (Estructura)
+# Naming Convention:
+#  Level 1 Axes: F, Fo, E
+#  Level 2 Subdimensions: <Axis><index 0-2>  (e.g. F0, Fo1, E2)
+#  Level 3 Specs: <Subdimension>_<index 0-2> (e.g. F0_0, Fo2_1, E1_2)
+#  Values: integer keys 0-7 (semantic strings retained from v1 for now)
+# Metadata per node: id, level, parent, path, terminal (only specs = true)
+# NOTE: Original verbose names removed at dimension/spec level per user request (Option 1). Semantics retained only inside value labels for usability.
+
+axes:
+  - id: F
+    label: "Función"
+    level: 1
+    path: "F"
+    terminal: false
+    values: {0: "Cotidiano/Experiencial", 1: "Científico/Formal", 2: "Técnico/Aplicado", 3: "Artístico/Creativo", 4: "Filosófico/Abstracto", 5: "Histórico/Temporal", 6: "Social/Cultural", 7: "Espiritual/Trascendente"}
+    subdimensions:
+      - id: F0
+        level: 2
+        parent: F
+        path: "F/F0"
+        terminal: false
+        values: {0: "Tipo de experiencia", 1: "Método de obtención", 2: "Grado de formalización", 3: "Precisión observacional", 4: "Repetibilidad", 5: "Instrumentación técnica", 6: "Validación cruzada", 7: "Generalización"}
+        specs:
+          - id: F0_0
+            level: 3
+            parent: F0
+            path: "F/F0/F0_0"
+            terminal: true
+            values:
+              0: "Sensorial directo"
+              1: "Intuitivo emocional"
+              2: "Práctico operativo"
+              3: "Observacional sistemático"
+              4: "Experimental controlado"
+              5: "Simulado modelado"
+              6: "Inferencial analítico"
+              7: "Transversal comparativo"
+          - id: F0_1
+            level: 3
+            parent: F0
+            path: "F/F0/F0_1"
+            terminal: true
+            values:
+              0: "Observación natural"
+              1: "Experimentación formal"
+              2: "Aplicación técnica"
+              3: "Muestreo estadístico"
+              4: "Medición instrumental"
+              5: "Triangulación"
+              6: "Meta-análisis"
+              7: "Protocolización"
+          - id: F0_2
+            level: 3
+            parent: F0
+            path: "F/F0/F0_2"
+            terminal: true
+            values:
+              0: "Informal vivencial"
+              1: "Semiformal metodológico"
+              2: "Formal sistemático"
+              3: "Taxonómico clasificatorio"
+              4: "Modelización matemática"
+              5: "Formal lógico"
+              6: "Estándar normativo"
+              7: "Sistematización integradora"
+      - id: F1
+        level: 2
+        parent: F
+        path: "F/F1"
+        terminal: false
+        values: {0: "Modalidad expresiva", 1: "Profundidad reflexiva", 2: "Perspectiva temporal", 3: "Innovación conceptual", 4: "Originalidad estética", 5: "Simbolismo cultural", 6: "Resonancia emocional", 7: "Transformación narrativa"}
+        specs:
+          - id: F1_0
+            level: 3
+            parent: F1
+            path: "F/F1/F1_0"
+            terminal: true
+            values:
+              0: "Artística estética"
+              1: "Filosófica reflexiva"
+              2: "Histórica narrativa"
+              3: "Performativa escénica"
+              4: "Musical armónica"
+              5: "Visual simbólica"
+              6: "Literaria narrativa"
+              7: "Multimodal híbrida"
+          - id: F1_1
+            level: 3
+            parent: F1
+            path: "F/F1/F1_1"
+            terminal: true
+            values:
+              0: "Superficial inmediata"
+              1: "Intermedia contextual"
+              2: "Profunda trascendental"
+              3: "Crítica analítica"
+              4: "Metafísica especulativa"
+              5: "Arquetípica simbólica"
+              6: "Sistémica integradora"
+              7: "Sintética emergente"
+          - id: F1_2
+            level: 3
+            parent: F1
+            path: "F/F1/F1_2"
+            terminal: true
+            values:
+              0: "Presente inmediato"
+              1: "Pasado histórico"
+              2: "Futuro proyectivo"
+              3: "Retrospectiva"
+              4: "Prospectiva"
+              5: "Sincrónica"
+              6: "Diacrónica"
+              7: "Atemporal"
+      - id: F2
+        level: 2
+        parent: F
+        path: "F/F2"
+        terminal: false
+        values: {0: "Estructura social", 1: "Dimensión trascendente", 2: "Integración comunitaria", 3: "Cohesión identitaria", 4: "Dinámica colaborativa", 5: "Interdependencia funcional", 6: "Mediación simbólica", 7: "Expansión transpersonal"}
+        specs:
+          - id: F2_0
+            level: 3
+            parent: F2
+            path: "F/F2/F2_0"
+            terminal: true
+            values:
+              0: "Individual personal"
+              1: "Grupal comunitario"
+              2: "Institucional formal"
+              3: "Red colaborativa"
+              4: "Comunidad distribuida"
+              5: "Red institucional"
+              6: "Ecosistema social"
+              7: "Alianza transorgánica"
+          - id: F2_1
+            level: 3
+            parent: F2
+            path: "F/F2/F2_1"
+            terminal: true
+            values:
+              0: "Inmanente material"
+              1: "Simbólico cultural"
+              2: "Trascendente espiritual"
+              3: "Mítico narrativo"
+              4: "Ritual performativo"
+              5: "Arquetípico colectivo"
+              6: "Contemplativo interior"
+              7: "Unitivo expansivo"
+          - id: F2_2
+            level: 3
+            parent: F2
+            path: "F/F2/F2_2"
+            terminal: true
+            values:
+              0: "Fragmentado disperso"
+              1: "Cohesivo coordinado"
+              2: "Integrado holístico"
+              3: "Coordinado funcional"
+              4: "Sinérgico ampliado"
+              5: "Coevolutivo adaptativo"
+              6: "Coherente resonante"
+              7: "Holárquico integrado"
+
+  - id: Fo
+    label: "Forma"
+    level: 1
+    path: "Fo"
+    terminal: false
+    values: {0: "Nombre/Sustantivo", 1: "Verbo/Acción", 2: "Adjetivo/Calificativo", 3: "Adverbio/Modificador", 4: "Preposición/Relación", 5: "Conjunción/Conexión", 6: "Artículo/Determinante", 7: "Interjección/Expresión"}
+    subdimensions:
+      - id: Fo0
+        level: 2
+        parent: Fo
+        path: "Fo/Fo0"
+        terminal: false
+        values: {0: "Tipo de elemento", 1: "Propiedades inherentes", 2: "Función sintáctica", 3: "Concordancia morfológica", 4: "Categoría semántica", 5: "Rol discursivo", 6: "Nivel de abstracción", 7: "Variación contextual"}
+        specs:
+          - id: Fo0_0
+            level: 3
+            parent: Fo0
+            path: "Fo/Fo0/Fo0_0"
+            terminal: true
+            values:
+              0: "Sustantivo concreto"
+              1: "Verbo acción"
+              2: "Adjetivo cualidad"
+              3: "Pronombre referencia"
+              4: "Sustantivo abstracto"
+              5: "Verbo estado"
+              6: "Adjetivo relacional"
+              7: "Locución compuesta"
+          - id: Fo0_1
+            level: 3
+            parent: Fo0
+            path: "Fo/Fo0/Fo0_1"
+            terminal: true
+            values:
+              0: "Género gramatical"
+              1: "Número morfológico"
+              2: "Caso funcional"
+              3: "Concordancia género"
+              4: "Concordancia número"
+              5: "Flexión verbal"
+              6: "Gradación adjetival"
+              7: "Derivación morfológica"
+          - id: Fo0_2
+            level: 3
+            parent: Fo0
+            path: "Fo/Fo0/Fo0_2"
+            terminal: true
+            values:
+              0: "Sujeto agente"
+              1: "Predicado núcleo"
+              2: "Complemento modificador"
+              3: "Objeto directo"
+              4: "Objeto indirecto"
+              5: "Núcleo sintagma"
+              6: "Aposición explicativa"
+              7: "Complemento circunstancial"
+      - id: Fo1
+        level: 2
+        parent: Fo
+        path: "Fo/Fo1"
+        terminal: false
+        values: {0: "Tipo de modificación", 1: "Alcance de acción", 2: "Relación establecida", 3: "Intensidad / escala", 4: "Orientación temporal", 5: "Focalización informativa", 6: "Polaridad pragmática", 7: "Modalidad epistémica"}
+        specs:
+          - id: Fo1_0
+            level: 3
+            parent: Fo1
+            path: "Fo/Fo1/Fo1_0"
+            terminal: true
+            values:
+              0: "Adverbio modal"
+              1: "Preposición relacional"
+              2: "Conjunción conectiva"
+              3: "Adverbio cuantitativo"
+              4: "Adverbio temporal"
+              5: "Preposición compuesta"
+              6: "Conjunción subordinante"
+              7: "Conectivo discursivo"
+          - id: Fo1_1
+            level: 3
+            parent: Fo1
+            path: "Fo/Fo1/Fo1_1"
+            terminal: true
+            values:
+              0: "Local palabra"
+              1: "Sintagmal constituyente"
+              2: "Oracional completo"
+              3: "Interoracional"
+              4: "Párrafo textual"
+              5: "Discurso global"
+              6: "Contexto situacional"
+              7: "Marco pragmático"
+          - id: Fo1_2
+            level: 3
+            parent: Fo1
+            path: "Fo/Fo1/Fo1_2"
+            terminal: true
+            values:
+              0: "Temporal secuencial"
+              1: "Espacial locativo"
+              2: "Causal lógico"
+              3: "Condicional hipotético"
+              4: "Concesivo contrastivo"
+              5: "Final propósito"
+              6: "Modal posibilidad"
+              7: "Comparativo relacional"
+      - id: Fo2
+        level: 2
+        parent: Fo
+        path: "Fo/Fo2"
+        terminal: false
+        values: {0: "Función determinativa", 1: "Especificidad", 2: "Modalidad expresiva", 3: "Referencialidad deíctica", 4: "Contraste enfático", 5: "Alcance cuantificacional", 6: "Inclusión / exclusión", 7: "Registro / formalidad"}
+        specs:
+          - id: Fo2_0
+            level: 3
+            parent: Fo2
+            path: "Fo/Fo2/Fo2_0"
+            terminal: true
+            values:
+              0: "Artículo definición"
+              1: "Interjección expresión"
+              2: "Marcador discursivo"
+              3: "Pronombre demostrativo"
+              4: "Cuantificador"
+              5: "Intensificador"
+              6: "Marcador tópico"
+              7: "Enfático expletivo"
+          - id: Fo2_1
+            level: 3
+            parent: Fo2
+            path: "Fo/Fo2/Fo2_1"
+            terminal: true
+            values:
+              0: "Definido específico"
+              1: "Indefinido genérico"
+              2: "Demostrativo deíctico"
+              3: "Partitivo"
+              4: "Universal inclusivo"
+              5: "Exclusivo"
+              6: "Distributivo"
+              7: "Indefinido variable"
+          - id: Fo2_2
+            level: 3
+            parent: Fo2
+            path: "Fo/Fo2/Fo2_2"
+            terminal: true
+            values:
+              0: "Declarativo neutro"
+              1: "Emotivo expresivo"
+              2: "Apelativo directo"
+              3: "Imperativo directivo"
+              4: "Interrogativo"
+              5: "Exclamativo"
+              6: "Dubitativo"
+              7: "Optativo"
+
+  - id: E
+    label: "Estructura"
+    level: 1
+    path: "E"
+    terminal: false
+    values: {0: "Elemento/Componente", 1: "Proceso/Transformación", 2: "Sistema/Organización", 3: "Red/Interconexión", 4: "Jerarquía/Nivel", 5: "Flujo/Movimiento", 6: "Patrón/Estructura", 7: "Emergencia/Novedad"}
+    subdimensions:
+      - id: E0
+        level: 2
+        parent: E
+        path: "E/E0"
+        terminal: false
+        values: {0: "Nivel de integración", 1: "Tipo de transformación", 2: "Complejidad organizacional", 3: "Modularidad estructural", 4: "Acoplamiento funcional", 5: "Escalabilidad", 6: "Robustez operativa", 7: "Elasticidad adaptativa"}
+        specs:
+          - id: E0_0
+            level: 3
+            parent: E0
+            path: "E/E0/E0_0"
+            terminal: true
+            values:
+              0: "Atómico elemental"
+              1: "Modular articulado"
+              2: "Sistémico holístico"
+              3: "Interfásico acoplado"
+              4: "Reticular compuesto"
+              5: "Multicapas coordinado"
+              6: "Ecosistémico integrado"
+              7: "Trans-sistémico emergente"
+          - id: E0_1
+            level: 3
+            parent: E0
+            path: "E/E0/E0_1"
+            terminal: true
+            values:
+              0: "Estático invariable"
+              1: "Dinámico adaptativo"
+              2: "Evolutivo emergente"
+              3: "Cíclico recurrente"
+              4: "Oscilatorio regulado"
+              5: "Autoorganizado"
+              6: "Autoadaptativo"
+              7: "Autopoiético"
+          - id: E0_2
+            level: 3
+            parent: E0
+            path: "E/E0/E0_2"
+            terminal: true
+            values:
+              0: "Simple lineal"
+              1: "Complejo jerárquico"
+              2: "Caótico emergente"
+              3: "Complejidad media"
+              4: "Complejidad elevada"
+              5: "Hipercomplejo"
+              6: "Ultraescala"
+              7: "Meta-organizativo"
+      - id: E1
+        level: 2
+        parent: E
+        path: "E/E1"
+        terminal: false
+        values: {0: "Topología conectiva", 1: "Organización jerárquica", 2: "Dinámicas de flujo", 3: "Distribución de carga", 4: "Densidad relacional", 5: "Resiliencia nodal", 6: "Latencia interactiva", 7: "Sincronización global"}
+        specs:
+          - id: E1_0
+            level: 3
+            parent: E1
+            path: "E/E1/E1_0"
+            terminal: true
+            values:
+              0: "Centralizada radial"
+              1: "Distribuida reticular"
+              2: "Descentralizada libre"
+              3: "Pequeño-mundo"
+              4: "Libre escala"
+              5: "Modular cluster"
+              6: "Multinivel"
+              7: "Heterárquica"
+          - id: E1_1
+            level: 3
+            parent: E1
+            path: "E/E1/E1_1"
+            terminal: true
+            values:
+              0: "Horizontal plana"
+              1: "Vertical estratificada"
+              2: "Matricial multidimensional"
+              3: "Polinivel adaptable"
+              4: "Holárquica anidada"
+              5: "Heterárquica distribuida"
+              6: "Dinámica reconfigurable"
+              7: "Autoescalante"
+          - id: E1_2
+            level: 3
+            parent: E1
+            path: "E/E1/E1_2"
+            terminal: true
+            values:
+              0: "Unidireccional lineal"
+              1: "Bidireccional recíproco"
+              2: "Multidireccional turbulento"
+              3: "Pulsante rítmico"
+              4: "Retroalimentado"
+              5: "Estocástico difuso"
+              6: "Canalizado prioritario"
+              7: "Sincronizado coherente"
+      - id: E2
+        level: 2
+        parent: E
+        path: "E/E2"
+        terminal: false
+        values: {0: "Regularidad estructural", 1: "Capacidad emergente", 2: "Estabilidad sistémica", 3: "Variabilidad adaptativa", 4: "Transiciones críticas", 5: "Simetría fractal", 6: "Autoorganización", 7: "Persistencia dinámica"}
+        specs:
+          - id: E2_0
+            level: 3
+            parent: E2
+            path: "E/E2/E2_0"
+            terminal: true
+            values:
+              0: "Regular periódico"
+              1: "Irregular aleatorio"
+              2: "Fractal autosimilar"
+              3: "Quasiperiódico"
+              4: "Aperiódico estructurado"
+              5: "Multi-fractal"
+              6: "Auto-simétrico"
+              7: "Metaestable"
+          - id: E2_1
+            level: 3
+            parent: E2
+            path: "E/E2/E2_1"
+            terminal: true
+            values:
+              0: "Estable conservativo"
+              1: "Adaptativo flexible"
+              2: "Emergente innovador"
+              3: "Evolutivo incremental"
+              4: "Reconfigurable"
+              5: "Generativo creativo"
+              6: "Auto-amplificante"
+              7: "Innovación disruptiva"
+          - id: E2_2
+            level: 3
+            parent: E2
+            path: "E/E2/E2_2"
+            terminal: true
+            values:
+              0: "Frágil vulnerable"
+              1: "Resiliente robusto"
+              2: "Antifragil potenciador"
+              3: "Estable dinámico"
+              4: "Amortiguado"
+              5: "Autorregulado"
+              6: "Auto-recuperable"
+              7: "Sostenido evolutivo"

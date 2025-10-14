@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Selección de bids",
+  "type": "object",
+  "properties": {
+    "offerId": {"type": "string"},
+    "policy": {"type": "string", "enum": ["minPrice", "minLatency", "balanced", "reputationWeighted"]},
+    "selectedNodes": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    }
+  },
+  "required": ["offerId", "selectedNodes"]
+}
