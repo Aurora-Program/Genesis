@@ -1,4 +1,4 @@
-# Proyecto Gene## 📚 Documentación Completa
+# Proyecto Genesis -  Conamed: Buttefly## 📚 Documentación Completa
 
 - 🔥 **[GENESIS_CORE_CONCEPT.md](./GENESIS_CORE_CONCEPT.md)** - Concepto central FFE + KG (pulido para compartir)
 - 📖 **[ARCHITECTURE_MCP.md](./ARCHITECTURE_MCP.md)** - Arquitectura modular completa (850 líneas)
